@@ -91,4 +91,8 @@ if st.button("Submit"):
     result = Message.title()
     st.success(result)
 
+# Date Input
 today = st.date_input("Today is:", datetime.datetime.now())
+
+# Time
+current_time = st.time_input("Time is:", datetime.time())
