@@ -124,4 +124,17 @@ with st.spinner("Waiting..."):
 st.success("Finished!")
 
 # Balloons
-st.balloons()
+# st.balloons()
+
+# sidebar
+st.sidebar.header("About")
+st.sidebar.text("Streamlit, D'Boss")
+
+
+# Functions
+@st.cache
+def run_fnc():
+    return range(100)
+
+
+st.write(run_fnc())
