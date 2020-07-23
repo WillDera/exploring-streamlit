@@ -1,3 +1,4 @@
+import time
 import datetime
 from PIL import Image
 import streamlit as st
@@ -96,3 +97,28 @@ today = st.date_input("Today is:", datetime.datetime.now())
 
 # Time
 current_time = st.time_input("Time is:", datetime.time())
+
+# Displaying JSON
+st.text("Display JSON")
+st.json({'name': "Will", 'level': "Kami"})
+
+# Display Code
+st.text("Display Raw code")
+# first method
+st.code("import numpy as np")
+
+# second method
+with st.echo():
+    # Shows even comment
+    import pandas as pd
+    df = pd.DataFrame()
+
+# Progress Bar
+bar = st.progress(0)
+for p in range(10):
+    bar.progress(p+1)
+
+# Spinner
+with st.spinner("Waiting..."):
+    time.sleep(5)
+st.success("Finished!")
