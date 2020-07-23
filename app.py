@@ -52,3 +52,14 @@ if status == "Active":
     st.success("You're Active")
 else:
     st.warning("Inactive")
+
+# SelectBox
+occupation = st.selectbox("Your Occupation", [
+                          "Web Developer", "Data Scientist", "Business Intel Analyst"])
+st.write("You selected ", occupation)
+
+
+# Multiselect
+location = st.multiselect("Where do you work?", (
+    "London", "Las Vegas", "Lagos", "Accra", "Kiev", "Nepal", "Rivers", "Abuja"))
+st.write("You selected %s location(s)", len(location))
