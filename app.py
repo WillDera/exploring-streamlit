@@ -1,3 +1,4 @@
+from PIL import Image
 import streamlit as st
 
 # Text/Title
@@ -21,7 +22,19 @@ st.warning("Be damned")
 # Get help Info about Python range
 st.help(range)
 
-# Writing text
+# Writing text/super func
 st.write("Text with kami")
 
 st.write(range(10))
+
+# Working with images
+img = Image.open("camper-image-placeholder.png")
+st.image(img, width=400, caption="Simple Streamlit Image")
+
+# Video
+# video_file = open("video", "rb").read()
+# st.video(video_file)
+
+# Audio
+audio_file = open("./PolynomialRegressionandPipelines.mp3", "rb").read()
+st.audio(audio_file, format="audio/mp3")
