@@ -38,3 +38,17 @@ st.image(img, width=400, caption="Simple Streamlit Image")
 # Audio
 audio_file = open("./PolynomialRegressionandPipelines.mp3", "rb").read()
 st.audio(audio_file, format="audio/mp3")
+
+
+# Widget
+# Checkbox
+if st.checkbox("Show/Hide"):
+    st.text("Showing/Hiding Widget")
+
+# Radio Button
+status = st.radio("What is your status", ("Active", "Inactive"))
+
+if status == "Active":
+    st.success("You're Active")
+else:
+    st.warning("Inactive")
