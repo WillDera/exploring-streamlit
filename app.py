@@ -122,3 +122,6 @@ for p in range(10):
 with st.spinner("Waiting..."):
     time.sleep(5)
 st.success("Finished!")
+
+# Balloons
+st.balloons()
