@@ -77,3 +77,15 @@ else:
 # st.button("Simple Button")
 if st.button("Tell Me Something"):
     st.text("The Earth Isn't Flat! or Is it?")
+
+# Handling Text Input
+firstname = st.text_input("Firstname: ", "Type Here...")
+if st.button("Submit"):
+    result = firstname.title()
+    st.success(result)
+
+# Handling Text Area
+Message = st.text_input("Message: ", "Type Here...")
+if st.button("Submit"):
+    result = Message.title()
+    st.success(result)
