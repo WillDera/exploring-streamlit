@@ -63,3 +63,17 @@ st.write("You selected ", occupation)
 location = st.multiselect("Where do you work?", (
     "London", "Las Vegas", "Lagos", "Accra", "Kiev", "Nepal", "Rivers", "Abuja"))
 st.write("You selected %s location(s)", len(location))
+
+# Slider
+age = st.slider("Your level?", 1, 10)
+if age < 4:
+    st.write("You're at Beginner Level")
+elif age > 7:
+    st.write("You're at Pro Level")
+else:
+    st.write("You're at Intermidiate Level")
+
+# Button
+# st.button("Simple Button")
+if st.button("Tell Me Something"):
+    st.text("The Earth Isn't Flat! or Is it?")
